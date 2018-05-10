@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     /** Called when the user taps the Send button */
+
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.editText);
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
         Log.i("myTag", "This is my message" + message);
+    }
+    public void goToCalculator(View view) {
+        Intent intent = new Intent(this, calculator.class);
+        startActivity(intent);
     }
 
     @Override
@@ -57,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Log.i("Tag","Hello");
             return true;
         }
 
