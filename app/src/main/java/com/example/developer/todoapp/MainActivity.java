@@ -41,9 +41,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         Log.i("myTag", "This is my message" + message);
     }
+
     public void goToCalculator(View view) {
-        Intent intent = new Intent(this, calculator.class);
-        startActivity(intent);
+        Intent Calculator = new Intent(this, calculator.class);
+        startActivity(Calculator);
+    }
+
+    public void goToCalendar(View view) {
+        Intent Calendar = new Intent(this, Calendar.class);
+        startActivity(Calendar);
+    }
+
+    public void goToMap(View view) {
+        Intent Map = new Intent(this, Map.class);
+        startActivity(Map);
     }
 
     @Override
